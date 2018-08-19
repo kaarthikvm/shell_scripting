@@ -1,3 +1,7 @@
+===================== Regular Expression ===========================
+Ref Link : 
+1) https://www.rexegg.com/regex-quickstart.html
+
 Regular Expression  - LETTER match (I mean single character)
 
 Ends with 2
@@ -35,7 +39,7 @@ egrep -n "[^aeiou]" text.txt
  Eg: 6:Lisa peaches 7
      7:Lisa peacaaabches 7  => Selects acaaab and it wont select 'c' as next letter is 'h' and n=2 in pattern
 How it works ==> Take each character and apply it and check for next subsequent character is with in range 
-
+Note : PLEASE USE EGREP for everything as it applies recursive expression
  
  
  [a-d] range selection
@@ -49,7 +53,3 @@ How it works ==> Take each character and apply it and check for next subsequent 
  +
  ?
  ()
-
-
-
-
