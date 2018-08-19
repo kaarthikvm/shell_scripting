@@ -85,4 +85,30 @@ egrep -n "[a-d]" text.txt > $NOSTDOUT
 # [Eg: 1:Fred apples 2 ] - Selects only a,b,c,d character only
 
 
+#+ - 1 or more  occurence of preceding character
+#eg: egrep -R "s+" passwd
+# messagebus:x:102:106::/var/run/dbus:/bin/false ==> Takes all s in this line as it checks for each character as per REGEX definition
+echo $MARKER
+egrep -R "s+" passwd >$NOSTDOUT
+egrep -R "s+{2}" passwd >$NOSTDOUT
+egrep -R "whoopsz+" passwd >$NOSTDOUT
+
+
+
+#* - 0 or more
+echo $MARKER
+egrep -R "z*" passwd >$NOSTDOUT #==> Prints all the information as 0 number of z found
+ 
+# ? - o or 1
+echo $MARKER
+egrep -R "whoopsz?" passwd >$NOSTDOUT
+ 
+# +? - Lazy 
+# it means ? marks takes priority
+echo $MARKER
+egrep -R "9+?" passwd >$NOSTDOUT #==> prints 0 or 1 "9" presence
+
+
+
+
 

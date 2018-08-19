@@ -47,9 +47,22 @@ Note : PLEASE USE EGREP for everything as it applies recursive expression
  egrep -n "[a-d]" text.txt
  [Eg: 1:Fred apples 2 ] - Selects only a,b,c,d character only
  
+
  
+ + - 1 or more  occurence of preceding character
+ eg: egrep -R "s+" passwd
+ messagebus:x:102:106::/var/run/dbus:/bin/false ==> Takes all s in this line as it checks for each character as per REGEX definition
+ egrep -R "s+" passwd
+ egrep -R "s+{2}" passwd 
+ egrep -R "whoopsz+" passwd
  
- *
- +
- ?
- ()
+ * - 0 or more
+ egrep -R "z*" passwd ==> Prints all the information as 0 number of z found
+ 
+ ? - o or 1
+ egrep -R "whoopsz?" passwd
+ 
+ +? - Lazy 
+ # it means ? marks takes priority
+ egrep -R "9+?" passwd ==> prints 0 or 1 "9" presence 
+ 

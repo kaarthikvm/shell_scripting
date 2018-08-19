@@ -11,3 +11,5 @@ Anne mangoes 7
 Greg pineapples 3
 Oliver rockmellons 2
 Betty limes 14
+John apples apricot 4
+Ben apricot apples 5
